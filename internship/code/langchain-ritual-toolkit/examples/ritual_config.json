@@ -1,0 +1,484 @@
+
+{
+    "contract_address": "0xa53C1aEf5a19d82037Fe7E54A3CBAa852f808E21",
+    "abi": [
+        {
+            "type": "constructor",
+            "inputs": [
+                {
+                    "name": "_scheduler",
+                    "type": "address",
+                    "internalType": "contract Scheduler"
+                }
+            ],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "fallback",
+            "stateMutability": "payable"
+        },
+        {
+            "type": "receive",
+            "stateMutability": "payable"
+        },
+        {
+            "type": "function",
+            "name": "NETWORK_REQUEST",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "REGISTER_SECRET",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "address"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "cancelCallback",
+            "inputs": [
+                {
+                    "name": "id",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "cancelJob",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "genericComputeCallback",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "target",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "inputs",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "getComputeOutputs",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string[]",
+                    "internalType": "string[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getJobOutput",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes[]",
+                    "internalType": "bytes[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getScheduledJobs",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string[]",
+                    "internalType": "string[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "jobIdToCallId",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "jobIds",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "normalComputeCallback",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "receivedBlocks",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "receivedOutputs",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "scheduleCompute",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "sidecarId",
+                    "type": "uint8",
+                    "internalType": "uint8"
+                },
+                {
+                    "name": "inputs",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "privateInputs",
+                    "type": "tuple[]",
+                    "internalType": "struct ScheduleConsumer.PrivateInput[]",
+                    "components": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "encryptions",
+                            "type": "tuple[]",
+                            "internalType": "struct ScheduleConsumer.Encryption[]",
+                            "components": [
+                                {
+                                    "name": "recipient",
+                                    "type": "string",
+                                    "internalType": "string"
+                                },
+                                {
+                                    "name": "encrypted_value",
+                                    "type": "string",
+                                    "internalType": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "gasLimit",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                },
+                {
+                    "name": "gasPrice",
+                    "type": "uint48",
+                    "internalType": "uint48"
+                },
+                {
+                    "name": "frequency",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                },
+                {
+                    "name": "numBlocks",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "payable"
+        },
+        {
+            "type": "function",
+            "name": "scheduleGenericCompute",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "target",
+                    "type": "address",
+                    "internalType": "address"
+                },
+                {
+                    "name": "inputs",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "gasLimit",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                },
+                {
+                    "name": "gasPrice",
+                    "type": "uint48",
+                    "internalType": "uint48"
+                },
+                {
+                    "name": "frequency",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                },
+                {
+                    "name": "numBlocks",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "payable"
+        },
+        {
+            "type": "function",
+            "name": "scheduleNormal",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "gasLimit",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                },
+                {
+                    "name": "gasPrice",
+                    "type": "uint48",
+                    "internalType": "uint48"
+                },
+                {
+                    "name": "frequency",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                },
+                {
+                    "name": "numBlocks",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "payable"
+        },
+        {
+            "type": "function",
+            "name": "scheduledComputeCallback",
+            "inputs": [
+                {
+                    "name": "jobId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "sidecarId",
+                    "type": "uint8",
+                    "internalType": "uint8"
+                },
+                {
+                    "name": "inputs",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "privateInputs",
+                    "type": "tuple[]",
+                    "internalType": "struct ScheduleConsumer.PrivateInput[]",
+                    "components": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "encryptions",
+                            "type": "tuple[]",
+                            "internalType": "struct ScheduleConsumer.Encryption[]",
+                            "components": [
+                                {
+                                    "name": "recipient",
+                                    "type": "string",
+                                    "internalType": "string"
+                                },
+                                {
+                                    "name": "encrypted_value",
+                                    "type": "string",
+                                    "internalType": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "deadline",
+                    "type": "uint32",
+                    "internalType": "uint32"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "scheduler",
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address",
+                    "internalType": "contract Scheduler"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "event",
+            "name": "ScheduledJobCreated",
+            "inputs": [
+                {
+                    "name": "jobid",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "callId",
+                    "type": "uint256",
+                    "indexed": false,
+                    "internalType": "uint256"
+                }
+            ],
+            "anonymous": false
+        }
+    ],
+    "schedule_fn": "scheduleNormal",
+    "cancel_fn": "cancelJob"
+}
+

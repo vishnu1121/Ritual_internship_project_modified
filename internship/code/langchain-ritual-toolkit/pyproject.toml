@@ -1,0 +1,18 @@
+[project]
+name = "langchain-ritual-toolkit"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=0.3.17",
+    "langchain-openai>=0.3.3",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.0.1",
+    "langgraph>=0.2.68",
+    "web3>=7.7.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

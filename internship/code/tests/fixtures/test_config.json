@@ -1,0 +1,68 @@
+{
+    "chainId": 1,
+    "rpcUrl": "http://test.url",
+    "contract_address": "0x1234567890123456789012345678901234567890",
+    "abi": [
+        {
+            "inputs": [],
+            "name": "getStakingInfo",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "apr",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "jobId",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "gasLimit",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "gasPrice",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "frequency",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "numBlocks",
+                    "type": "uint256"
+                }
+            ],
+            "name": "schedule",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "jobId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "cancel",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "schedule_fn": "schedule",
+    "cancel_fn": "cancel"
+}

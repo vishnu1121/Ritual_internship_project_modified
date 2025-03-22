@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - LOG_LEVEL=INFO
+      # use an openrouter key instead
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL:-https://openrouter.ai/api/v1}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+      - DEBUG=true
+    volumes:
+      - .:/app
+    command: uvicorn staking_optimizer.api.main:app --host 0.0.0.0 --port 8000 --reload --log-level debug
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+secrets:
+  github_token:
+    file: ${GITHUB_TOKEN_FILE:-~/.github/token}

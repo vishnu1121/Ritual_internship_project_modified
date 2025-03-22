@@ -1,0 +1,5 @@
+
+# Default StakingOptimizer agent configuration
+model: openai/gpt-4o-2024-11-20
+temperature: 0.7
+max_tokens: 1000
